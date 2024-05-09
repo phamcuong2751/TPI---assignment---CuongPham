@@ -1,4 +1,4 @@
-# Project Title
+# ITP - Assignment - Cuong Pham
 
 A brief description of what this project does and who it's for.
 
@@ -31,4 +31,4 @@ To install this project, follow these steps:
 - [Baeldung](https://www.baeldung.com/)
 - [Stackoverflow](https://stackoverflow.com/)
 - [Spring Guide](https://spring.io/guides/gs/scheduling-tasks)
-- [Spring Guide](https://www.geeksforgeeks.org/spring-resttemplate/)
+- [Geeksforgeeks Guide](https://www.geeksforgeeks.org/spring-resttemplate/)
