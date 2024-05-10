@@ -17,4 +17,7 @@ public class CurrenciesInsertRequest {
     @NotNull
     private float rateFloat;
     private String chartName;
+
+    public CurrenciesInsertRequest(String eur, String euro, String symbol, String rate, float rateFloat, String chartName) {
+    }
 }
