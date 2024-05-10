@@ -27,4 +27,7 @@ public class CurrenciesEntity {
     private String chartName;
     private LocalDateTime createAt;
     private LocalDateTime updateAt;
+
+    public CurrenciesEntity(String usd, String oldDollar, String $ewr, String s, float v, String oldForex) {
+    }
 }

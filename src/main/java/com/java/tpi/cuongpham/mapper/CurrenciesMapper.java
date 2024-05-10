@@ -3,12 +3,10 @@ package com.java.tpi.cuongpham.mapper;
 import com.java.tpi.cuongpham.client.dto.CurrencyObjectDTO;
 import com.java.tpi.cuongpham.entity.CurrenciesEntity;
 import com.java.tpi.cuongpham.payload.request.CurrenciesInsertRequest;
-import com.java.tpi.cuongpham.payload.response.CoinDeskResponse;
 import com.java.tpi.cuongpham.payload.response.CurrenciesResponse;
 import com.java.tpi.cuongpham.utils.DateUtils;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 public class CurrenciesMapper {
     private static volatile CurrenciesMapper instance;
@@ -38,7 +36,7 @@ public class CurrenciesMapper {
     }
 
     public CurrenciesEntity toEntity(CurrenciesInsertRequest request) {
-        CurrenciesEntity entity = new CurrenciesEntity();
+        CurrenciesEntity entity = new CurrenciesEntity("USD", "Old Dollar", "$ewr", "1.0", 1.0F, "old forex");
         entity.setCcyCode(request.getCode());
         entity.setCcyName(request.getName());
         entity.setCcySymbol(request.getSymbol());
@@ -51,7 +49,7 @@ public class CurrenciesMapper {
     }
 
     public CurrenciesEntity toEntity(CurrencyObjectDTO currency) {
-        CurrenciesEntity entity = new CurrenciesEntity();
+        CurrenciesEntity entity = new CurrenciesEntity("USD", "Old Dollar", "$ewr", "1.0", 1.0F, "old forex");
         entity.setCcyCode(currency.getCode());
         entity.setCcyName(currency.getDescription());
         entity.setCcySymbol(currency.getSymbol());

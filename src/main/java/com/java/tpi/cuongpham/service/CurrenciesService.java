@@ -127,19 +127,19 @@ public class CurrenciesService implements ICurrenciesService {
 
     private static CurrenciesEntity getCurrenciesEntity(CurrenciesUpdateRequest request, Optional<CurrenciesEntity> optionalCurrencies) {
         CurrenciesEntity entity = optionalCurrencies.get();
-        if (!entity.getCcyName().equals(request.getName())) {
+        if (!request.getName().equals(entity.getCcyName())) {
             entity.setCcyName(request.getName());
         }
-        if (!entity.getCcySymbol().equals(request.getSymbol())) {
+        if (!request.getSymbol().equals(entity.getCcySymbol())) {
             entity.setCcySymbol(request.getSymbol());
         }
-        if (!entity.getRate().equals(request.getRate())) {
+        if (!request.getRate().equals(entity.getRate())) {
             entity.setRate(request.getRate());
         }
-        if (entity.getRateFloat() != request.getRateFloat()) {
+        if (request.getRateFloat() != entity.getRateFloat()) {
             entity.setRateFloat(request.getRateFloat());
         }
-        if (entity.getChartName().equals(request.getChartName())) {
+        if (request.getChartName().equals(entity.getChartName())) {
             entity.setChartName(request.getChartName());
         }
         return entity;

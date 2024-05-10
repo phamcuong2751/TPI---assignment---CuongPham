@@ -7,6 +7,8 @@ import com.java.tpi.cuongpham.payload.response.BaseResponse;
 import com.java.tpi.cuongpham.payload.response.BaseResponseBuilder;
 import com.java.tpi.cuongpham.service.CurrenciesService;
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +17,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/v1/currency")
 @RequiredArgsConstructor
+@NoArgsConstructor(force = true)
 public class CurrenciesController {
     private final CurrenciesService currenciesService;
-
     /**
      * Get all list currencies
      * @return List Currency
